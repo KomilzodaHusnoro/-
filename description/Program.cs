@@ -6,7 +6,16 @@ namespace description
     {
         static void Main(string[] args)
         {
-
+            System.Console.Write("Enter students name:");
+            string sName = Console.ReadLine();
+            System.Console.Write("Enter students last name:");
+            string sLastName = Console.ReadLine(); 
+            System.Console.Write("Enter students grade:");
+            int sGrade = int.Parse(Console.ReadLine());
+            System.Console.Write("Enter students age:");
+            int sAge = int.Parse(Console.ReadLine());
+            Student nStudent = new Student(sName, sLastName, sGrade, sAge);
+            nStudent.studentInfo();
         }
     }
     class Student 
@@ -25,7 +34,7 @@ namespace description
         public Student (){}
         public void studentInfo()
         {
-            System.Console.WriteLine($"Name: {Name}\nLastName: {LastName}\nStudent's grade: {grade}\nStudent's age {age}");
+            System.Console.WriteLine($"Name: {Name}\nLastName: {LastName}\nStudent's grade: {grade}\nStudent's age: {age}");
         }
     }
 }
